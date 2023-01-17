@@ -1,25 +1,104 @@
+
+/* basic reset  */
+
+
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {margin-left: 10px;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* display layout */
+
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
     grid-auto-rows: auto;
-    grid-gap: 1rem;
+    grid-gap:30px;
 }
 
-.card {
-    border: solid black 2px;}
-    
-.card:hover {
-    transform: scale(1.01);
-    transition-duration: 1.5s;
- };
-
-
-
  /* card 1 */
+#card1{
+    max-width: 300px;
+  height: auto;
+  background:rgb(54, 75, 189);
+  border: 3px solid rgb(12, 12, 12);
+  border-radius: 1%;
+  box-shadow: 15px 15px 0 -2.5px rgb(19,24,52), 15px 15px 0 0 rgb(12, 12, 12);
+  color: #ffffff8c;
+  transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+ 
+}
+#card1:hover {
+    box-shadow:inset 300px 0 0 0 rgb(251, 251, 251);
+    color: rgb(251, 251, 251);
+     box-shadow: 15px 15px 0 -2.5px rgb(251, 251, 251);
+     border-radius: 1%;
+  }
 
-img{
-  
-
-  
+  #img_card1 {
+      margin: 10px 15px 10px 10px;
+   
       
   }
+#img_img_card1 {
+    border-radius: 1%;
+    border: solid 2px rgb(12, 12, 12);
+}
+
+#ttl_card1 {
+    display: flex;
+    justify-content: center;
+}
+
+#description_card1 {
+ margin-left: 12px;
+}
