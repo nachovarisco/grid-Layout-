@@ -228,7 +228,6 @@ select {
   height: 50px;
   border-bottom-left-radius: 30px ;
   cursor: pointer;
-  /* From https://css.glass */
 background: rgba(255, 255, 255, 0.43);
 
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -237,3 +236,5 @@ backdrop-filter: blur(11.8px);
 
  
 }
+
+/* card 3 start */
