@@ -132,7 +132,7 @@ select {
 
 .overlay {
   position: absolute;
-  bottom: 0;
+  bottom: 4%;
   left: 0;
   right: 0;
   background-color: #ffea00a3;
@@ -145,8 +145,44 @@ select {
  
 }
 
+
+@media (min-widht:964px)  and (max-width: 1294px) {
+  
+.overlay {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  background-color: #ffea00a3;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .8s ease;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
+ 
+}}
+
+
+@media (max-width: 963px){
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffea00a3;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .8s ease;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 40px;
+ 
+  
+}}
+
 #container_card2:hover .overlay {
-  height: 100%;
+  height: 30%;
 }
 
 #text_text_card2 {
@@ -186,7 +222,18 @@ select {
   margin-right: 3%;
 }
 
-#link_card2{
-text-decoration: none;
-color: black;
+#btn_card2 {
+  border: solid black 2px;
+  border-top-right-radius: 30px;
+  height: 50px;
+  border-bottom-left-radius: 30px ;
+  cursor: pointer;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.43);
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(11.8px);
+-webkit-backdrop-filter: blur(11.8px);
+
+ 
 }
