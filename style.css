@@ -135,7 +135,8 @@ select {
   bottom: 4%;
   left: 0;
   right: 0;
-  background-color: #ffea00a3;
+  background-color: #ffea00;
+  border: solid black 2px;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -153,7 +154,7 @@ select {
   bottom: 3%;
   left: 0;
   right: 0;
-  background-color: #ffea00a3;
+  background-color: #ffea00;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -170,7 +171,7 @@ select {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #ffea00a3;
+  background-color: #ffea00;
   overflow: hidden;
   width: 100%;
   height: 0;
@@ -237,4 +238,135 @@ backdrop-filter: blur(11.8px);
  
 }
 
-/* card 3 start */
+/* card 3  */
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+#card3_container{
+  box-sizing: border-box;
+  font-size: 100%;
+
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 100%;
+  font-family: "Fira Sans", sans-serif;
+
+}
+
+
+
+
+#hover_card3 {
+  width: 300px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
+}
+#hover_card3:has(#link_hover_card3:hover){
+  transform: translateY(0);
+  transition: transform 0.35s;
+}
+#hover_card3:hover #hover_content_card3{
+  background-color: #ac83bd;
+  bottom: 100%;
+  transform: translateY(100%);
+  padding: 50px 60px;
+  transition: all 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
+}
+#hover_card3:hover #link_hover_card3 {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  transition: all 0.3s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
+}
+#hover_card3:hover img {
+  transform: scale(1);
+  transition: 0.35s 0.1s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);
+}
+#hover_content_card3{
+  width: 100%;
+  text-align: center;
+  background-color: #b04eda;
+  padding: 0 60px 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(0);
+  transition: all 0.35s 0.35s cubic-bezier(0.1, 0.72, 0.4, 0.97);
+  will-change: bottom, background-color, transform, padding;
+  z-index: 1;
+}
+#hover_content_card3::before, #hover_content_card3::after {
+  content: "";
+  width: 100%;
+  height: 120px;
+  background-color: inherit;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+#hover_content_card3::before {
+  top: -80px;
+  -webkit-clip-path: ellipse(60% 80px at bottom center);
+          clip-path: ellipse(60% 80px at bottom center);
+}
+#hover_content_card3::after {
+  bottom: -80px;
+  -webkit-clip-path: ellipse(60% 80px at top center);
+          clip-path: ellipse(60% 80px at top center);
+}
+#hover_title_card3 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+#hover_title_card3 span {
+  color: #f6deff;
+}
+#hover_text_card3 {
+  font-size: 0.75rem;
+}
+#link_hover_card3 {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-decoration: none;
+  color: #f6deff;
+  opacity: 0;
+  padding: 10px;
+  transition: all 0.35s;
+}
+#link_hover_card3:hover svg {
+  transform: translateX(4px);
+}
+#link_hover_card3 svg {
+  width: 18px;
+  margin-left: 4px;
+  transition: transform 0.3s;
+}
+
+#hover_card3 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1;
+  transform: scale(1.2);
+  transition: 0.35s 0.35s transform cubic-bezier(0.1, 0.72, 0.4, 0.97);
+}
